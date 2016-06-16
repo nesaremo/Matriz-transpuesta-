@@ -1,12 +1,47 @@
-*.class
+import java.util.Scanner;
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+public class Transpuesta {
+	public static void main(String[] arg) {
+		int x;
+		
+		Scanner s = new Scanner(System.in);
+		System.out.print("digite la dimencion de la matriz");
+		x = s.nextInt();
 
-# Package Files #
-*.jar
-*.war
-*.ear
+		int m[][] = new int[x][x];
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[0].length; j++) {
+				System.out.print("los valores de la matriz");
+				m[i][j] = s.nextInt();
+
+			}
+
+		}
+		System.out.println("matriz origunal");
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[0].length; j++) {
+				
+				System.out.print(m[i][j]);
+				
+			}
+			
+			System.out.println();
+
+		}
+		System.out.println("matriz transpuesta");
+		for (int i = 0; i < m.length; i++) {
+		
+			for (int j = 0; j < m.length; j++) {
+				
+				System.out.print(m[j][i]);
+
+			}
+			
+			System.out.println();
+
+		}
+
+	}
+
+}
